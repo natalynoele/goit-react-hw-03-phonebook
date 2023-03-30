@@ -16,9 +16,9 @@ class App extends Component {
   
   localStorageKey = 'PhoneBookContacts';
 
-  // componentDidUpdate = () => {
-  //  localStorage.setItem(this.localStorageKey, JSON.stringify(initialContacts))
-  // };
+  componentDidUpdate = () => {
+   localStorage.setItem(this.localStorageKey, JSON.stringify(initialContacts))
+  };
 
   addContact = (name, number) => {
     const normalizeName = name.toLowerCase();
