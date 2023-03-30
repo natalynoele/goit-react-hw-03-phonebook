@@ -1,8 +1,8 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import Btn from './Button_Style';
-import React from 'react';
 
-const Button = ({ type, clickBtn, id = null, children }) => { 
+const Button = ({ type, children, clickBtn, id }) => { 
   return (
     <Btn type={type} onClick={() => clickBtn(id)}>
       {children}
@@ -11,8 +11,11 @@ const Button = ({ type, clickBtn, id = null, children }) => {
 };
 
 Button.propTypes = {
-  type: PropTypes.string.isRequired, 
-  handleEvent: PropTypes.func,
+  type: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  clickBtn: PropTypes.func,
+  children: PropTypes.node,
 };
+
 
 export default Button;
